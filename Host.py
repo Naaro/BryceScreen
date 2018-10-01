@@ -54,7 +54,7 @@ def RunCommands(cmd):
 try:
     while Enabled:
         msg = c.recv(512)
-        RunCommands(str(msg))
+        RunCommands(str(msg.decode()))
 except KeyboardInterrupt:
     pass
 finally:
