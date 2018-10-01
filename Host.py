@@ -30,31 +30,31 @@ print ('Connection Established : ',addr)
 print(' ')
 
 def RunCommands(cmd):
-    if msg == '<Exit>':
+    if cmd == '<Exit>':
         print ('Shutting Down')
         Enabled = False
         c.close()
         GPIO.cleanup()
-    elif msg == '<GreenOn>':
+    elif cmd == '<GreenOn>':
         print('Green On')
         GPIO.output(GreenLED,True)
-    elif msg == '<GreenOff>':
+    elif cmd == '<GreenOff>':
         print('Green Off')
         GPIO.output(GreenLED,False)
-    elif msg == '<BlueOn>':
+    elif cmd == '<BlueOn>':
         print('Blue On')
         GPIO.output(BlueLED,True)
-    elif msg == '<BlueOff>':
+    elif cmd == '<BlueOff>':
         print('Blue Off')
         GPIO.output(BlueLED,False)
     else:
-        print (addr, ' >>  ', msg)
+        print (addr, ' >>  ', cmd)
     
 
 try:
     while Enabled:
-        msg = c.recv(256)
-        RunCommands(msg)
+        msg = c.recv(512)
+        RunCommands(str(msg))
 except KeyboardInterrupt:
     pass
 finally:
