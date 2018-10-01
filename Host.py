@@ -47,6 +47,8 @@ def RunCommands(cmd):
     elif cmd == '<BlueOff>':
         print('Blue Off')
         GPIO.output(BlueLED,False)
+    elif cmd == 'send':
+        c.send(b'this is a test')
     else:
         print (addr, ' >>  ', cmd)
     
