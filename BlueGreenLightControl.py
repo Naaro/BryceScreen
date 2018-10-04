@@ -17,12 +17,14 @@ Running = True
 
 # Prints out the available Commands
 def PrintCommands():
+	print(' ')
 	print('=== Available Commands ===')
 	print('Quit : Ends the script')
 	print('Green On : Turns on the Green LED')
 	print('Green Off : Turns on the Green LED')
 	print('Blue On : Turns on the Blue LED')
 	print('Blue Off : Turns on the Blue LED')
+	print(' ')
 	
 # Turns the Blue LED on/off
 def Blue(Value):
