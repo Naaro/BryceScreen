@@ -2,12 +2,13 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD)
 
-Button=7
-LED=11
+Button=3
+LED=5
 BPress=False
 
 GPIO.setup(Button,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(LED,GPIO.OUT)
+GPIO.output(LED,False)
 
 
 try: 
