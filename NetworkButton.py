@@ -41,7 +41,7 @@ try:
             time.sleep(0.3)
         elif GPIO.input(Button)==0 and BPress==True:
             print('Power : Off')
-            c.send(b'LED Power On')
+            c.send(b'LED Power Off')
             BPress=False
             GPIO.output(LED,False)
             time.sleep(0.3)
