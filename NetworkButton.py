@@ -3,7 +3,7 @@ import time
 import socket
 
 # GPIO Stuff
-GPIO.setwarnings(false)
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 Button=3
 WhiteLED=5
