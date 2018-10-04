@@ -30,6 +30,7 @@ print ('Connection Established : ',addr)
 print(' ')
 
 
+BPress = False
 try: 
     while True:
         if GPIO.input(Button)==0 and BPress==False:
