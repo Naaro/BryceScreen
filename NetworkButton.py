@@ -14,7 +14,7 @@ GPIO.output(LED,False)
 
 # Network Stuff
 s = socket.socket()
-host = '192.168.0.23'
+host = '192.168.0.24'
 port = 9001
 Enabled = True
 
