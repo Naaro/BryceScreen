@@ -6,7 +6,7 @@ import socket
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 Button=3
-WhiteLED=5
+LED=5
 GPIO.setup(Button,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(LED,GPIO.OUT)
 GPIO.output(LED,False)
