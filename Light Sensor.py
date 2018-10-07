@@ -4,7 +4,7 @@ import time
 
 
 # 3v3=1
-LightSensor=15
+LightSensor=16
 RedLED=11
 GreenLED=13
 
