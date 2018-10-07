@@ -22,6 +22,7 @@ def rc_time (LightSensor):
     GPIO.setup(LightSensor,GPIO.IN)
     while (GPIO.input(LightSensor) == GPIO.LOW):
         count+=1
+        print(count)
     return count
 
 
