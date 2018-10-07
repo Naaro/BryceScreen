@@ -22,14 +22,14 @@ def rc_time (LightSensor):
     GPIO.setup(LightSensor,GPIO.IN)
     while (GPIO.input(LightSensor) == GPIO.LOW):
         count+=1
-        print(count)
+        print('output : ' + str(count))
     return count
 
 
 try:
     while True:
         Output=rc_time(LightSensor)
-        print(str(Output))
+        #print(str(Output))
         if Output>5000:
             GPIO.output(RedLED,True)
             GPIO.output(GreenLED,False)
