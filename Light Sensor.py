@@ -1,12 +1,16 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BOARD)
+
 
 # 3v3=1
 LightSensor=7
 RedLED=11
 GreenLED=13
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(RedLED,GPIO.OUT)
+GPIO.setup(GreenLED,GPIO.OUT)
 
 def rc_time (LightSensor):
     count=0
@@ -20,12 +24,11 @@ def rc_time (LightSensor):
         count+=1
     return count
 
+
 try:
-    GPIO.setup(RedLED,GPIO.OUT)
-    GPIO.setup(GreenLED,GPIO.OUT)
     while True:
         Output=rc_time(LightSensor)
-        print Output
+        print(Output)
         if Output>5000:
             GPIO.output(RedLED,True)
             GPIO.output(GreenLED,False)
